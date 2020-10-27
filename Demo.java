@@ -24,7 +24,6 @@ public class Demo{
      }
      end = end + "}" + ",\n";
    }
-   System.out.print(end + "}");
    return end + "}";
  }
  public static int[][] create2DArray(int rows, int cols, int maxValue){
@@ -37,7 +36,7 @@ public class Demo{
  }
  return arr;
 }
-public static int[][] create2DArrayRandomized(int rows, int cols,int maxValue){
+public static String create2DArrayRandomized(int rows, int cols,int maxValue){
   int[][] arr = new int [rows][];
   int length = arr.length;
   for(int i = 0;i < rows;i++){
@@ -48,14 +47,7 @@ public static int[][] create2DArrayRandomized(int rows, int cols,int maxValue){
       arr[i][j] = (int)(Math.random() * (maxValue + 1));
     }
   }
-  return arr;
-}
-  public static void main(String[] args) {
-    if(args.length == 0){
-      loopnums.printLoop(5);
-    }
-    else{
-    loopnums.printLoop(Integer.parseInt(args[0]));
+  String end = arrayDeepToSTring(arr);
+  return end;
   }
-}
 }
