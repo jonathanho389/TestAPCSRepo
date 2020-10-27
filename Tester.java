@@ -6,7 +6,7 @@ public class Tester{
                       };
     System.out.println(Demo.arrToString(newarr1).replace("},","},\n"));
     System.out.println(Demo.arrayDeepToString(newarr2).replace("},","},\n"));
-    System.out.println(Demo.arrayDeepToString(Demo.create2DArray(5, 4, 4)));
-    System.out.println(Demo.arrayDeepToString(Demo.create2DArrayRandomized(6,4,5)));
+    System.out.println(Demo.arrayDeepToString(Demo.create2DArray(5, 4, 4)).replace("},","},\n"));
+    System.out.println(Demo.arrayDeepToString(Demo.create2DArrayRandomized(6,4,5)).replace("},","},\n"));
   }
 }
