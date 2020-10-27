@@ -11,7 +11,7 @@ public class Demo{
     end = end.substring(0, end.length() - 2);
     return "{" + end + "}";
   }
- public static String arrayDeepToSTring(int[][] arr){
+ public static String arrayDeepToString(int[][] arr){
    int length = arr.length;
    String end = "{ \n";
    if(length == 0){
@@ -29,14 +29,14 @@ public class Demo{
  public static int[][] create2DArray(int rows, int cols, int maxValue){
    int[][] arr = new int[rows][cols];
    int length = arr.length;
-   for(int i = 0;i < length;i++){
-     for(int j = 0;j < arr[0].length;j++){
+   for(int i = 0;i < rows;i++){
+     for(int j = 0;j < cols;j++){
        arr[i][j] = (int)(Math.random() * (maxValue + 1));
    }
  }
  return arr;
 }
-public static String create2DArrayRandomized(int rows, int cols,int maxValue){
+public static int[][] create2DArrayRandomized(int rows, int cols,int maxValue){
   int[][] arr = new int [rows][];
   int length = arr.length;
   for(int i = 0;i < rows;i++){
@@ -47,7 +47,6 @@ public static String create2DArrayRandomized(int rows, int cols,int maxValue){
       arr[i][j] = (int)(Math.random() * (maxValue + 1));
     }
   }
-  String end = arrayDeepToSTring(arr);
-  return end;
+  return arr;
   }
 }
